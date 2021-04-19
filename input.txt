@@ -1,0 +1,3 @@
+SBERBANK 2% yes yes
+BelinvestBank 20% no yes
+BelarusBank 100% no yes
