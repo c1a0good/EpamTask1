@@ -25,12 +25,12 @@ public abstract class Credit {
     @Override
     public String toString() {
         return bank.getBankName() +
-                "  interestRate = " + String.format("%.2g",(interestRate + bank.countMinInterestRate(refinancingRate)) * 100) + "%" +
-                ", term = " + term +
-                ", minValue = " + minValue +
-                ", maxValue = " + maxValue +
-                ", earlyRepayment = " + (earlyRepayment ? "Yes" : "No") +
-                ", creditLine = " + (creditLine ? "Yes" : "No");
+                " credit with interest rate = " + String.format("%.2g",(interestRate + bank.countMinInterestRate(refinancingRate)) * 100) + "%" +
+                ", term = " + term + " month" +
+                ", minimal loan value = " + minValue +
+                ", maximum loan value = " + maxValue +
+                ", with" + (earlyRepayment ? "" : "out") + " early repayment availability " +
+                ", with" + (creditLine ? "" : "out") + " credit line availability";
     }
 
     public abstract double countSum(double loan);
